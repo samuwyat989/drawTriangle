@@ -23,14 +23,19 @@ namespace drawTriangle
         }
         public void DrawTriangle()
         {
+            Graphics g = this.CreateGraphics();
             Pen pen = new Pen(Color.Black);
             int x1, x2, x3, y1, y2, y3;
-            x1 = 100;
-            y1 = 100;
-            x2 = 300;
-            y2 = 100;
-            x3 = 200;
-            y3 = 200;
+            x1 = 50;
+            y1 = 50;
+            x2 = 250;
+            y2 = 50;
+            x3 = 150;
+            y3 = 150;
+
+            g.DrawLine(pen, x1, y1, x2, y2);
+            g.DrawLine(pen, x2, y2, x3, y3);
+            g.DrawLine(pen, x3, y3, x1, y1);
         }
     }
 }
