@@ -19,19 +19,19 @@ namespace drawTriangle
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            DrawTriangle();
-        }
-        public void DrawTriangle()
-        {
             Graphics g = this.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
-            int x1, x2, x3, y1, y2, y3;
-            x1 = 50;
-            y1 = 50;
-            x2 = 250;
-            y2 = 50;
-            x3 = 150;
-            y3 = 150;
+            Pen drawPen = new Pen(Color.Black);
+            int triX1 = 50;
+            int triX2 = 100;
+            int triX3 = 75;
+            int triY1 = 50;
+            int triY2 = 50;
+            int triY3 = 75;
+            DrawTriangle(drawPen,triX1,triY1,triX2,triY2,triX3,triY3);
+        }
+        public void DrawTriangle(Pen pen,int x1,int y1,int x2,int y2,int x3, int y3)
+        {
+            Graphics g = this.CreateGraphics();            
 
             g.DrawLine(pen, x1, y1, x2, y2);
             g.DrawLine(pen, x2, y2, x3, y3);
